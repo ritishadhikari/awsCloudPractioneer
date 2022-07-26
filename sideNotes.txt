@@ -1,0 +1,71 @@
+Module 1: Introduction to Amazon Web Services
+
+AWS Service offerings:
+    - Compute
+    - Storage
+    - Network Security
+    - Blockchain
+    - Machine Learning
+    - Artificial Intelligence
+    - Robot Development
+    - Video Production
+    - Orbital Satellites 
+
+Amazon Elastic Compute Cloud (Amazon EC2): It is a virtual Server in the cloud. 
+
+Pay for what you need becomes the key point for running your business on AWS. 
+
+Module 2: Getting Started with Cloud Acquisition
+
+AWS responsibility includes:
+    - Compute
+    - Storage
+    - Database
+    - Networking
+
+AWS global infrastructure includes:
+    - Regions
+    - Availability Zones
+    - Edge Locations
+
+Six key areas affect how cloud is bought: Pricing, Security, Data Residency, Sustainability, 
+Governance and terms and conditions. 
+
+Module 3: AWS Well Architected Framework
+
+A Workload is defined as a collection of interrelated applications, infrastructure, policy, governance
+and operations running on AWS that provide business or operational value. 
+
+In the cloud Environment, customers can:
+    - Stop guessing capacity needs
+    - Test at production Scale
+    - Make experimentation easier
+    - Allow for architectures to evolve
+    - Build Data Driven architectures
+    - Improve through game days
+
+Pillars of Well Architected Framework:
+    - Operational Excellence: The Ability to run and monitor systems to deliver business value and to 
+    continually improve supporting processes and procedures.
+    - Security: The ability to protect information, systems and assets while delivering business 
+    value through risk assessments and mitigation strategies
+    - Reliability: The Ability to recover from failures and meet demand.
+    - Performance Efficiency: The ability to use computing resources efficiently to meet system 
+    requirements and to maintain that efficiency as demand changes and technology evolves
+    - Cost Optimization: The ability to achieve business outcomes at the lowest price point.
+
+Amazon Congnito: 
+    - Supports Multiple Login Providers
+    - Unique Users/devices
+    - Helps implement security best practices
+
+AWS provides a way to record resource configuration changes as they occur, and evaluate them against rules 
+you configure by the AWS configuration service. With conformance packs for AWS config, you configure rules
+coupled with automated remediation. This enables us to automate response to misconfigurations. 
+
+Reliability is the ability of a workload to perform its intended function correctly and consistently when
+it's expected to. This includes the ability operate and test the workload through its total lifecyle.
+To achive Reliability, we focus on resiliency:
+    - Recover from infrastructure or service disruptions
+    - Dynamically acquire computing resources to meet demand
+    - Mitigate Disruptions

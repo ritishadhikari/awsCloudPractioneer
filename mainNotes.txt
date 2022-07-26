@@ -1,0 +1,450 @@
+Module 2: Compute in the Cloud
+
+EC2: 
+    - Highly Flexible
+    - Cost-Effective
+    - Quick
+
+Multitenancy:  Sharing Underlying Hardware between virtual machines. 
+
+Amazon EC2 Configurations:
+    - OS: 
+        - Windows
+        - Linux
+    - Software
+        - Internal Business applications
+        - Web Apps 
+        - Databases
+        - 3rd Party Softwares
+EC2 instances are vertically scalable - More CPU and Memories as per need.
+
+We can also control the networking aspect of Amazon EC2. 
+
+Each Amazon EC2 instance type is grouped under an instance family. 
+
+Amazon EC2 instance families:
+    - General Purpose 
+        - Balance resources
+        - Diverse Workloads
+        - Web Servers
+        - Code Repositories
+    - Compute Optimized
+        - Compute Intensive Tasks
+        - Gaming Servers
+        - High Performance Computing (HPC)
+        - Scientific Modelling
+    - Memory Optimized
+        - Memory Intensive Tasks
+    - Accelarated computing
+        - Utilizes Hardware Accelarators
+        - Floating Point Number Calculations
+        - Graphics Processing
+        - Data Pattern Matching
+    - Storage Optimized
+        - High Performance for Locally Stored Data
+
+EC2 Pricing:
+    - On Demand: You only pay for the duration you run the EC2 instance for. 
+    - Savings Plan: Low Prices on EC2 usage, in exchange to a commitment to a consistent amount
+    of usage, measured in Dollars per Hour for a one or three year term. Can provide savings of 
+    upto 72% on AWS compute usage. 
+    - Reserved Instances: Suitable for steady state workloads, ones with predictable usage and 
+    offers upto 75% discount vs On-Demand Pricing. Commitment for atleast 1 or 3 year terms  
+    - Spot Instances: Request to use spare AWS EC2 instance for upto 90% discount of the 
+    on-demand price. AWS can reclaim the instance anytime they need it giving 2 Minute warning
+    to finish up the work and save the state.
+    - Dedicated Hosts: Physical Hosts dedicated for specific usage. Used generally for meeting
+    a certain compliance requirements and no one will share tenancy of that host. 
+
+Scaling Amazon EC2: 
+    - Amazon EC2 Auto Scaling enables you to automatically add or remove Amazon EC2 instances
+    in response to changing application demand. By automatically scaling your instances in and
+    out as needed, you are able to maintain a greater sense of application availability. 
+    - Two Approaches to Auto Scaling:
+        - Dynamic Scaling: Responds to changing demand
+        - Predictive Scaling: Automatically schedules the right number of Amazon EC2 instances 
+        based on predicted demand. 
+
+Directing Traffic with Load Balancing:
+    - A Load Balancer is an application which takes in requests and routes them to the 
+    instances to be processed. 
+    - Elastic Load Balancing or ELB is a managed service and is engineered to do the 
+    undifferentiated heavy lifting of load balancing
+    - ELB is regional, and hence the solution is highly available with no additional effort
+    on our part. 
+    - ELB is automatically scalable, as our traffic grows, ELB is designed to handle the 
+    additional throughput with no change to the hourly cost. When our EC2 fleet autoscales out 
+    as each instance comes online, AutoScaling service just lets the load balancing service 
+    know that it's ready to handle the traffic and off it goes.  When the Fleet goes down, 
+    ELB first stops the all new traffic and waits for the existing requests to be complete and 
+    drain out.
+    - The Autoscaling instances can terminate the instances without disruptions to existing 
+    customers. 
+    - Backend Network traffic can also be solved through an ELB. Because ELB is regional, 
+    its a single URL that each frontend instance uses, than the ELB directs the traffic to 
+    the backend that has the least outstanding requests. If the backend scales, once the new
+    instance is ready, it just tells the ELB that it can take traffic and it gets to work. The
+    Frontend does not know and does not care how many backend instances are running
+
+Messaging and Queuing:
+    - In a loosely coupled architecture, single failure won't cause cascading failures. 
+    - Amazon Simple Queue Service (SQS) and Amazon Simple Notification Service (SNS) are
+    two services based on the loosely couple architecture. 
+    - Simple Queing Service:
+        - Send Messages
+        - Store Message and 
+        - Receive Message between Software components at any volume
+        - Data Contained within a message is called the payload and it is protected until delivery
+        - Amazon SQS queues are where messages are placed until they are processed. 
+    - Simple Notification Service:
+        - Send Messages
+        - Send Notifications to end users through a Pub/Sub Model
+        - Amazon SNS topic: A Channel for messages to be delivered.
+        - Configure Subscribers to that topic and find the published messages for the Subscribers
+
+Additional Compute Services:
+    - AWS offers multiple serverless compute options: 
+        - AWS Lambda:
+            - Lambda is a service which allows you to upload your code in lambda functions 
+            - We then need to configure a trigger and from there, the service waits for the
+            trigger
+            - When the trigger is detected, the code is automatically run in a managed environment.
+            - It is designed to run code which are generally under 15 minutes hence it is 
+            suitable for quick processing like handling requests
+        - AWS Fargate: 
+            - If we do not want to manage the underlying Clusters of ECS or EKS than eventually uses
+            EC2 instances to be managed, then we use AWS Fargate which can manage the EC2 instances. 
+            
+    - AWS Container Services: 
+        - Incase we need access to the underlying environment, and still want efficiency
+            and portability
+            - AWS Elastic Container Service (Amazon ECS)
+            - AWS Elastic Kubernetes Service (Amazon EKS)
+                - They both runs on Docker Containers which uses Operating System Level 
+                Virtualization to deliver software in Containers
+                - These containers run on top of EC2 instances and run in isolation to each
+                other. 
+                - Orchestration tools were created to manage the containers 
+            
+AWS Global Infrastructure:
+
+Regions: 
+    - Throughout the globe, AWS builds regions to be closest to the regions where Business
+    traffic demands. 
+    - Each region can be connected to other regions through a high speed fibre network
+    - Four Factors to decide a region:
+        - Compliance: Can the data be authorized to be transported to a separate territory.
+        - Proximity: How close is it to the customer base
+        - Feature Availabilty: Features might not be available for a particular location
+        - Pricing: Some locations are more expensive to operate than other
+
+Availability Zones:
+    - Each Avaialbility Zones can be one or more data centers with redundant power, networking and 
+    connectivity. 
+    - It helps to continue the businesses without interruptions. 
+    - Recommended to run across atleast two availability zones in a region. 
+    - Many AWS services runs at the region level. It means they run synchronously across multiple 
+    AZs without additional effort on our part. Elastic Load Balancer is regional. 
+
+Edge Locations:
+    - If the customer base is away from the data centers or regions. 
+    - Caching copies of data of customers all around the world uses the concept of Content delivery
+    Network. 
+    - CDNs in AWS is called Amazon CloudFront. 
+    - AWS Cloudfront is a service that helps deliver data, videos, application and APIs to customers 
+    around the world with low latency, high transfer speeds. 
+    - AWS CloudFront uses Edge Locations all around the world to help accelarate communications with
+    users, no matter where they are. 
+    - Edge Locations run a Domain Name Service known as Amazon Route 53, helping direct customers 
+    to the correct web locations with reliably low latency. 
+    - AWS Outposts where AWS will install a mini region right inside your data center. 
+
+Provision AWS Resources:
+    - In AWS, everything is an API call
+    - Interacting with AWS Services is possible through:
+        - AWS Management Console
+        - AWS Command Line Interface (CLI)
+            - It allows to make API calls using the terminal on your machine. 
+        - AWS Software Development Kit:
+            - Interacts with AWS resources through various programming languages. 
+            - Helps the developers to create programs that uses AWS without using the low level
+            APIs as well as using the manual API creation. 
+    - We can use managed tools to provision resources like:
+        - AWS Elastic Beanstalk:
+            - Service that allows us to provision Amazon EC2 based environments. 
+            - Provide Application Code and desired Configurations to the service. 
+            - The service than take the information and builds the environment for you.
+            - Save Environment Configurations so that they can be deployed easily.
+            - Helps you to focus on your business application and not on the infrastructure.
+        - AWS Cloud Formation:
+            - Infrastructure as Code tool that is used to define a wide variery of AWS resources 
+            in a declarative way using JSON or YAML text based documents called Cloud Formation 
+            templates. 
+            - It is also not limited to EC2 based solutions unlike in AWS Elastic Beanstalk. It 
+            supports:
+                - Storage
+                - Database
+                - Analytics
+                - Machine Learning, etc
+
+Networking:
+
+Virtual Private Cloud:
+    - A VPC lets you provision a logically isolated section on the AWS cloud where you can launch 
+    AWS resources in a virtual network that we define.  
+    - These resources can be public facing, i.e., they have access to the internet or private.
+    - The Public and Private grouping of resources are called subnets and there are range of IP addresses in
+    our VPC 
+    - In order to allow traffic from the public internet to flow into and out of your VPC, we must attach an 
+    internet gateway or IGW through to your VPC. 
+    - For a Private Traffic, we would opt for a Private Gateway that only allows people in if they are coming
+    from an approved network, not the public internet. This private gateway is called a virtual private gateway.
+    - Private Gateway allows you to create a VPN connection between a private network like your on-premise
+    data center or internal corporate network to your VPC. 
+    - For Private Data Exchange, we would want the lowest amount of latency possible with the highest amount
+    of security possible. We can achieve that using AWS Direct Connect. 
+    - AWS Direct Connect allows you to establish completely private didicated fiber connection from your
+    data center to AWS. AWS Direct Connect provides a physical line that connects your network to your 
+    AWS VPC. 
+    - One VPC might have multiple types of gateways attached for multiple types of resources all residing in
+    the same VPC just in different Subnets. 
+
+AWS has a wide range of tools that cover every layer of security:   
+    - Network Hardening
+        - Subnets can also control traffic permissions
+        - Every packet that crosses the subnet boundaries gets checked against something called Network
+        Access Control List (Network ACL). 
+        - This check is to see if the packet has permissions to either leave or enter the subnet based on 
+        who it was sent from and how it's trying to communicate. 
+        - A Network ACL only gets to evaluate if a packet croses a subnet boundary in or out. It does not 
+        evaluate if a packet can reach a specific EC2 instance or not.
+        - Instance Level Network Security is for EC2 instance level. Every Instance comes with a Security 
+        Group. By default, the security groups does not allow any traffic into the instance at all. All 
+        ports are blocked. 
+        - We can modify the security group to accept a specific type of traffic. For website, we can allow
+        http traffic to be accepted, but not OS or Admin related traffics. 
+        - Security Groups are stateful, i.e., it remembers which user should be allowed in, while Network
+        ACLs are Stateless, which means they don't remember a set of users but contains List of the attributes
+        of a user who should be allowed in and who should not be allowed in.
+        - Hence with Security Groups, you allow specific traffic in and by default, all traffic is allowed out.
+        - Good Network Security will take advantage of both Network ACLs and Security Groups. 
+    - Application security
+    - User Identity
+    - Authentication and Authorization
+    - Distributed Denial of Service or DDOS prevention
+    - Data Integrity
+    - Encryption, etc. 
+
+            
+
+Amazon Route 53: 
+    - AWS's Domain Name Service. 
+    - It is highly available and Scalable.
+    - DNS is a translational Service. It translates between websites names and IP addresses. 
+    - Route 53 can also direct traffic to different endpoints through several different routing policies:
+        - Latency Based Routing
+        - Geolocation DNS:
+            - Divert Traffic based on where customers are located.
+        - GeoProximity Routing
+        - Weighted RoundRobin
+    - Route 53 can also be used to register domain names by buying and managing it.
+
+Amazon CloudFront:  
+    - It works on the Principles of Content Delivery Network. It is a network that delivers edge content
+    to users based on their geographic location. 
+
+Storage and Databases:
+
+Amazon Elastic Block Store (Amazon EBS):
+    - We can create virtual Hard Drive that we call EBS volumes, that we can attach to the EC2 instances.
+    - These are separate drives from the local instance store volumes and they are not tied directly to 
+    the host where the EC2 instances is running on.
+    - We define the size, type and configurations for the volume we need and then attach to the EC2 
+    instance.
+    - EBS allows to take incremental backups of your data called as Snapshots. 
+    - It is important that we take snapshots of EBS volumes.
+    - We can restore data from a snapshot incase the drive becomes corrupted.
+
+Amazon Simple Storage Services (S3):
+    - Stores and Retrieves Unlimited Amount of Data at any scale.
+    - Store data as objects and store objects in buckets
+    - Maximum allowable update size per object is 5 TB.
+    - We can version objects to prevent accidental deletion of objects. 
+    - We can create multiple buckets. 
+    - We can limit permission who can have access to which objects.
+    - Tiers offers mechanisms with different storage use cases, such as data which needs to be accessed
+    frequently versus audit data that needs to be retained for several years.
+    - Types of Tiers:
+        - S3 Standard: 
+            - 99.999999999% of durability even after one year. 
+            - Data is stored across 3 different facilities, so multiple copies resides across locations. 
+            - Can be used for static website hosting
+        - S3 Standard-Infrequent Access (S3 Standard-IA): 
+            - Used for data that is accessed less frequently, but requires rapid access when needed. 
+            - Perfect place to store backups and disaster recovery files, etc.
+        - S3 Glacier: 
+            - For retaining audit data which will not be accessed for years. 
+            - Able to retrieve data within a minutes to hours. Upto 12 hours in case of 
+                - S3 Glacier deep archive.
+            - We can implement a Glacier Vault Lock policy and lock the vault if we want.
+            - In a vault lock policy, we can implement WORK (write once, read many) and lock the 
+            policy for future edits.
+        - S3 One Zone-Infrequent Access (S3 One Zone-IA):
+            - Similar to S3 Standard-IA but stores data in a single availabilty zones.
+            - Has a lower storage price than S3 standard-I
+        - S3 Intelligent-Tiering:
+            - Ideal for data with unknown or changing access patterns
+            - Requires a small monthly monitoring and automation fee per object
+
+    - Amazon S3 lifecycle management helps us to move data automatically between tiers. It helps to 
+    take away the burden so that we can focus more on our business needs.
+    - In a Block storage, only the pieces that are changed are updated, while in object storage, the
+    entire object is updated. 
+
+Comparing Amazon EBS and Amazon S3:
+    EBS: 
+        - Sizes upto 16 TB
+        - Solid State by default
+        - HDD options
+    S3:
+        - Unlimited Storage
+        - Individual Object upto 5 TBs
+        - Specialize in Write Once and Read Many
+        - 99.999999999% durable
+
+Amazon Elastic File System:
+    - Managed File System
+    - Multiple Instances can access the data in EFS at the same time. 
+    - It is a Linux File System
+    - Regional Resource, meaning any EC2 instance in the region can write to the EFS file system, while 
+    EBS is confined to the Availability Zone of the EC2 Instance.
+    - Automatically scales (grows and shrinks) unlike in EBS. 
+    - On Premise servers can access Amazon EFS using AWS Direct Connect.
+
+Amazon Relational Database Service (Amazon RDS): 
+    - AWS supported Databases:
+        - MySQL
+        - PostgreSQL
+        - Oracle
+        - Microsoft SQL Server 
+    - RDS is a managed service which supports all the above major database engines
+    - Benefits of using managed Amazon Relational Database Service:
+        - Automated Patching
+        - Backups
+        - Redundancy
+        - Failover
+        - Disaster Recovery
+    - Amazon Aurora:
+        - Managed Relational Database Service from Amazon
+        - Supports MySql and PostgreSQL
+        - Comes at 1/10th the cost of commercial databases. 
+        - Data are replicated across facilities. 6 copies are available at any given time.
+        - Can deploy upto 15 read replicas. 
+        - Provides Continious Backups to S3.
+        - Point in time recovery.
+    
+Amazon Dynamo DB:
+    - A Serverless Database
+    - Data is organized into Items and items have Attributes.
+    - Milliseconds response time hence very fast response times. 
+    - It is a non-relational Database. Hence it has simple flexible schemas. 
+    - It is Highly Scalable. 
+
+DynamoDb Vs Amazon RDS:
+    - RDS:
+        - Automatic High Availability
+        - Customer Ownership of Data
+        - Customer Ownership of Schema
+        - Customer control of Network
+    - DynamoDb:
+        - Key-Value
+        - Massive Throughput
+        - PB size potential
+        - Granular API Access
+
+Amazon Redshift:
+    - DataWarehouse for BigData for Historical Analysis.
+    - Loads in Multiple Petabytes
+    - 10 times higher performances than traditional databases.
+
+AWS Data Migration Service (Amazon DMS):
+    - Helps migrate customer's existing Databases onto AWS in a secure and easy fashion.
+    - The source Databases remains fully operational during Migration
+    - Downtime is minimized for applications that rely on that database.
+    - The Source and Target databases don't have to be of the same type. 
+    - Homogenous Migration - Source and Target DataBase are of the same type
+    - Heterogenous Database - Source and Target DataBase are of the different type. Here the 
+    schema structures, DataTypes and Database Codes are different for source and the target. Here
+    the conversion takes place through AWS schema conversion tool before migration. 
+    - Other Features of DMS includes:   
+        - Development and Test Database Migrations from Production
+        - Database Consolidations into one central database.
+        - Continous Database Replication for disaster recovery or for geographic separation.
+
+Additional Database Services:
+    - Amazon Document DB: Great for Content Management (with MongoDb Compatibility)
+    - Amazon Neptune: A Graph Database for recommendation engines and Social Networking
+    - Amazon Quantum Ledger Database: Immutable Ledger where no entry can be removed from the 
+    audits.
+    - Amazon Managed Blockchain: For Block Chain Purposes
+    - Amazon Elasicache : For faster reads. Compatible with Redis and Memcache
+    - Amazon DynamoDB Accelarator: In Memory cache for Dynamo DB (non relational data)
+
+Security:
+
+Shared Responsibily Model:
+    - Customers are responsible for security in the cloud
+        - Operating System
+        - Application
+        - Data
+    - AWS is responsibile for the security of the cloud
+        - Physical Layer
+        - Network
+        - Hypervisor
+
+User Permissions and Access:
+    - When you create an AWS Account, we are given the root account user. This root user
+    is the owner of the AWS account and has permissions to do anything they want
+    inside of the AWS account.
+    - AWS account root user can access and control any resources in the account. 
+    - Multi Factor Authentication (MFA) must be turned on for Root Users.
+    - AWS Identity and Access Management (AWS IAM): Create IAM users by default has no 
+    permissions. Explicitly allow the IAM users to perform certain actions. 
+    - Principle of Least Privilege:  A user is granted access only to what they need.
+    - IAM policy is a Json Document that describes what API call a User can or cannot
+    make.
+    - Ex: 
+        {"version":"2012-10-17",
+         "statement": {
+            "Effect" : "Allow",  # only deny or allow
+            "Action" : "s3:ListBucket",  # What action needs to be taken
+            "Resource" : "arn:aws:s3:::coffee_shop_reports"  # Unique ID for the s3 bucket
+         }
+         }
+    - IAM Groups: Groupings of users who are bounded by a certain policy. All of the users
+    in the group will have the permissions as mentioned by the policy.
+    - Roles: Roles have associated permissions that allow or deny specific actions. Roles
+    can be assumed for temporary amounts of time. 
+    - Grant Roles to temporarily grant permissions to AWS resources to users, external identities,
+    applications and other AWS services. 
+    - When an Identity assumes a role, it abandons all the previous permissions it has and it assumes
+    the permissions of that role.
+
+AWS Organizations:
+    - A Central Location to manage multiple AWS accounts.
+    - We can manage billing, control access, compliance, security and share resources across 
+    AWS accounts. 
+    - Provides Hierarchical groupings of accounts to meet security, compliance or budgetary needs.
+    - AWS service and API access control.
+    - In AWS organizations, you can centrally control permissions for the accounts in your 
+    organization by using service control policies (SCPs). SCPs enables to place restrictions 
+    on AWS services, resources and individual API actions that users and roles in each account 
+    can access. 
+    - In AWS organizations, you can group accounts into organizational units (OUs) to make 
+    it easier to manage accounts with similar business or security requirements. When you apply
+    a policy to an OU, all the accounts in the OU automatically inherit the permissions specified
+    in the policy. 
+
+## Read About the Compliance Part. Skipped Here.
+
+        
