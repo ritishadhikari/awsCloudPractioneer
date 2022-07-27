@@ -447,4 +447,35 @@ AWS Organizations:
 
 ## Read About the Compliance Part. Skipped Here.
 
-Hello
+Monitoring:
+    - Observing systems, collecting metrics, and then using data to make decisions. 
+
+Amazon Cloudwatch: 
+    - Access all your metrics from a central location.
+    - Allows you to monitor AWS infrastructure and the application to run on AWS in real time. 
+    - Amazon Cloudwatch Alarm : Set a threshold for a metric, and when the threshold is reached, 
+    cloudwatch can generate an alarm and trigger an action.
+    - Cloud watch alarms are integrated with SNS, so that proper notification can be sent to the 
+    intended users. 
+    - CloudWatch Dashboard: Metrices under one paine in real time. 
+
+AWS CloudTrail:
+    - It is a comprehensive API auditing tool.
+    - Every request gets logged in the cloud trail engine. 
+    - The engine records exactly who made the requests, which operator, when were they, what 
+    were their IP address. 
+    - CloudTrail can save those logs indefinitely in secure S3 buckets. 
+
+AWS Trusted Advisor:
+    - Evaluates your resources against five pillars:
+        - Cost Optimization
+        - Performance
+        - Security
+        - Fault Tolerance
+        - Service Limits
+    - It runs through a series of checks for each pillars into our accounts based on AWS best
+    practices.
+    - It helps point in the right direction when it comes to the five pillars. We can set up email
+    allerts, that goes out t billing, security contacts as checks get runs in your account. 
+
+    
