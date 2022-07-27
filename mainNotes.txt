@@ -446,5 +446,4 @@ AWS Organizations:
     in the policy. 
 
 ## Read About the Compliance Part. Skipped Here.
-
         
