@@ -490,3 +490,23 @@ AWS Free Tier:
         - Amazon Comprehend Medical
         - Amazon Dynamo DB
         - Amazon SNS, etc
+
+Billing Dashboards:
+    - It is a simple way to checkout what we are spending on AWS.
+
+Consolidated Billing: 
+    - Roll individual bill into one which will be paid by the owner of the organization.
+    - AWS offers bulk pricing. Each individual account may have a small amount of usage, 
+    but we can get the bulk discount pricing because of the aggregate of all accounts across the
+    organizations.
+
+AWS Budgets:
+    - Allows you to set custom budgets for variety of scenarios like cost and usage.
+    - We will receive alerts if the costs exceeds or are forecasted to exceed your budgeted amount.
+
+AWS Cost Explorer:
+    - Console Based service that allows you to visually see and analyse how you are spending
+    money with AWS. 
+    - It shows you the service you are spending the most money on, and it gives 12 months of
+    historical data for analysig the spend pattern.
+    -  
