@@ -478,4 +478,15 @@ AWS Trusted Advisor:
     - It helps point in the right direction when it comes to the five pillars. We can set up email
     allerts, that goes out t billing, security contacts as checks get runs in your account. 
 
-    
+
+Pricing and Support:
+
+AWS Free Tier:
+    - Always free: Does Not expire
+    - 12 Months Free
+    - Trials: Short term free trial. 
+    - Few of the Free Tier Services includes:
+        - Amazon Sagemaker
+        - Amazon Comprehend Medical
+        - Amazon Dynamo DB
+        - Amazon SNS, etc
