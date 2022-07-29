@@ -509,4 +509,15 @@ AWS Cost Explorer:
     money with AWS. 
     - It shows you the service you are spending the most money on, and it gives 12 months of
     historical data for analysig the spend pattern.
-    -  
+
+AWS Support Plans:
+    - Basic Support: Every Customer gets it for free. 
+    - Developer Tier: Basic + Email Customer Support directly
+    - Business Tier: Basic+Developer + Phone Number with 4 Hours SLA
+    - Enterprise Level Support: Basic+Developer+Business + 15mins SLA + Dedicated Technical 
+    Account Manager
+
+AWS Marketplace: 
+    - Find Manage and Deploy third party software in AWS architecture.
+    - Customers have options like one-click deployment that allows them to procure and use 
+    products from thousands of software sellers, right when you need them. 
