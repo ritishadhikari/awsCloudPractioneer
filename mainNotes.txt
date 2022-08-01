@@ -543,3 +543,40 @@ Migration Strategies:
     - Repurchasing: Abandon Legacy Software Vendors infavour of Cloud Native Packages. Potential 
     benefits is long term. 
     - Refactoring: Add new features, that might not be available on prem. 
+
+AWS Snow Family:
+    - Physical Devices to move data in and out of the AWS family.
+    - Secure and Tamper Resistant while on site and in transit
+    - All data are encrypted with 256 bit encryption keys
+    - AWS Snow Computing:
+        - Holds upto 8 TB of data
+        - Contains Edge Computing
+    - AWS Snowball edge:
+        - Snowball Edge Compute Optimized
+            - 
+        - Snowball Edge Storage Optimized
+            -
+    - AWS SnowMobile:
+        - Sorrounded by a 45 foot shipping container and it moved by trucks.
+        - 100 PB
+
+Innovation with AWS:
+    - VMWare Cloud on AWS:
+    - Amazon SageMaker: 
+        - Quickly Build, train and Deploy Model at scale
+        - Build Custom Models
+    - Amazon Augmented AI: 
+    - Amazon Lex: Helps to Build Interactive Chatbots. 
+    - Amazon Textract: Extracting Text and data from documents 
+    - AWS DeepRacer: Reinforcement Learning. 
+    - Internet of Things: Enable Connected Devices to communicate all around the world.
+    - AWS Ground Station: Pay for the satellite time you actually need.
+    - Amazon Transcribe: Convert Speech to Text
+
+The Cloud Journey:  
+    - AWS Well Architected Framework:
+        - Operational Excellence
+        - Security
+        - Reliability
+        - Performance Efficiency
+        - Cost Optimization.
