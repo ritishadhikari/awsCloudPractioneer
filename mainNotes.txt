@@ -521,3 +521,25 @@ AWS Marketplace:
     - Find Manage and Deploy third party software in AWS architecture.
     - Customers have options like one-click deployment that allows them to procure and use 
     products from thousands of software sellers, right when you need them. 
+
+Migration and Innovation:
+
+AWS Cloud Adoption Framework:   
+    - Helps manage Migration Process through guidance.
+    - Organizes Guidance into 6 perspectives:
+        - Business
+        - People
+        - Governance 
+        - Platform
+        - Security
+        - Operations
+
+Migration Strategies:
+    - 6 R's
+    - Rehosting: Lift and Shift
+    - Replatforming: Lift, Tinker(Optimize few cloud configurations) and Shift
+    - Retire: End of Life for application which are no longer needed, thereby savnig costs.
+    - Retain: Turn them off after some time after migrating.
+    - Repurchasing: Abandon Legacy Software Vendors infavour of Cloud Native Packages. Potential 
+    benefits is long term. 
+    - Refactoring: Add new features, that might not be available on prem. 
