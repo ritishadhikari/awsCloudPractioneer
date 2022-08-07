@@ -69,3 +69,35 @@ To achive Reliability, we focus on resiliency:
     - Recover from infrastructure or service disruptions
     - Dynamically acquire computing resources to meet demand
     - Mitigate Disruptions
+
+
+Getting Started with AWS Cloud Essentials:
+
+Core AWS Services are:
+    - Amazon Virtual Private Cloud (Amazon VPC)
+    - Amazon Elastic Compute Cloud
+    - Amazon Storage:
+        - S3
+        - Elastic Bean Stalk
+        - Elastic File System
+        - S3 Glacier
+    - Databases:
+        - Amazon Relational Database Service
+        - Amazon Dynamo DB
+    - AWS Identity and Management (IAM)
+
+The AWS Global Infrastructure is designed and built to deliver a flexible, reliable, scalable and secure 
+cloud computing environment with high quality global network performance. 
+
+In an AWS Region:
+    - Data Replication across regions is controlled by you
+    - Communication between Regions uses AWS backbone network infrastructure.
+
+AWS recommends replicating data and resources across Availability Zones for resiliency.
+
+EC2 autoscaling detects impaired EC2 instances and unhealthy applications and replaces the instances 
+without your intervention. It provides several scaling options - manual, scheduled, dynamic or on-demand 
+and predictive.
+
+Elastic File System is ideal when there are multiple instances that needs to use the same storage.
+

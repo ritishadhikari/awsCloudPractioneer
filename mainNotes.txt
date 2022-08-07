@@ -580,3 +580,29 @@ The Cloud Journey:
         - Reliability
         - Performance Efficiency
         - Cost Optimization.
+
+AWS Well Architected Framework:
+    - Designed to enable architect, developers and users of AWS to build secure, 
+    high performing and resilient infrastructure for their applications.
+    -  Pillars:
+        - Operational Excellence:
+            - Focusses on running and monitoring systems to deliver business value and with that
+            continually increase processes and procedures.
+        - Security:
+            - Checking integrity of data. Ex. Protecting systems by using encryptions.
+        - Reliability: 
+            - Focusses on recoverability
+            - Helps to meet business and customer demand
+        - Performance Efficiency:
+            - Entails using IT and computing resources efficiently. 
+        - Cost Optimization:
+            - Looks for optimization of costs.
+            
+
+Benefits of AWS Cloud: 
+    - Trade Upfront Expense for variable expense
+    - Benefits from Massive economies of scale
+    - Stop guessing capacity
+    - Increase speed and agility
+    - Stop Spending money running and maintaining data centers
+    - Go global in minutes
