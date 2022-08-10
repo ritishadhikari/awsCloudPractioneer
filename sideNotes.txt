@@ -101,3 +101,30 @@ and predictive.
 
 Elastic File System is ideal when there are multiple instances that needs to use the same storage.
 
+AWS Foundations: Securing your AWS Cloud:
+
+Security Design Priciples:
+    - Apply Principle of Least Privilege
+        - Grant access as needed
+        - Enforce Separation of duties
+        - Avoid Long Term credentials
+    - Enable Traceability:
+        - Monitor Actions and changes
+        - Leverage logs and metrics
+        - Audit your cloud resources
+    - Secure All Layers:
+        - Take a defense in depth approach
+        - Use different AWS Services
+    - Automate Security:
+        - Automate security routine tasks with APIs
+        - Turn Infrastructure into Code
+    - Protect Data in Transit and at Rest:
+        - Use encryption and access controls
+        - Classify your data with tagging
+        - Leverage VPN and TLS connections
+    - Prepare for Security Events:
+        - Mitigate the impact of security incidents
+        - Create processes to isolate incidents and restore operations.
+    - Minimize attack surface:
+        - Be ready to scale and absorb the attack
+        - Safeguard exposed resources
