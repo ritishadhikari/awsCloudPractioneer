@@ -234,8 +234,7 @@ AWS has a wide range of tools that cover every layer of security:
     - Distributed Denial of Service or DDOS prevention
     - Data Integrity
     - Encryption, etc. 
-
-            
+    
 
 Amazon Route 53: 
     - AWS's Domain Name Service. 
@@ -387,7 +386,7 @@ Additional Database Services:
     - Amazon Quantum Ledger Database: Immutable Ledger where no entry can be removed from the 
     audits.
     - Amazon Managed Blockchain: For Block Chain Purposes
-    - Amazon Elasicache : For faster reads. Compatible with Redis and Memcache
+    - Amazon Elasticache : For faster reads. Compatible with Redis and Memcache
     - Amazon DynamoDB Accelarator: In Memory cache for Dynamo DB (non relational data)
 
 Security:
