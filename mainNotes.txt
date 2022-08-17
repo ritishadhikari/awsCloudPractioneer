@@ -537,7 +537,7 @@ Migration Strategies:
     - 6 R's
     - Rehosting: Lift and Shift
     - Replatforming: Lift, Tinker(Optimize few cloud configurations) and Shift
-    - Retire: End of Life for application which are no longer needed, thereby savnig costs.
+    - Retire: End of Life for application which are no longer needed, thereby saving costs.
     - Retain: Turn them off after some time after migrating.
     - Repurchasing: Abandon Legacy Software Vendors infavour of Cloud Native Packages. Potential 
     benefits is long term. 
@@ -597,7 +597,6 @@ AWS Well Architected Framework:
         - Cost Optimization:
             - Looks for optimization of costs.
             
-
 Benefits of AWS Cloud: 
     - Trade Upfront Expense for variable expense
     - Benefits from Massive economies of scale
